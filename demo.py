@@ -6,8 +6,15 @@
 
 
 def main():
+#	x=1
+#	print( id(x) )
 	print( "In my main method." )
 	
+
+#	interesting python variable value keep same id. Surprised this doesn't consume a lot of memory.
+#x=1
+#print( id(x) )
+
 
 #	How to process command line arguments?
 
@@ -17,6 +24,7 @@ def main():
 
 #	Apparently, when called from the command line, __name__ is set to "__main__"
 #	When included as a library, I am guessing, it is not.
+#	if __name__ == "__main__": main()
 if __name__ == "__main__":
 	print ( 'Script called from command line.' ) 
 	main()
