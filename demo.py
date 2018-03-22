@@ -67,6 +67,8 @@ if __name__ == "__main__":
 	                    help='Add different values to list')
 	
 	parser.add_argument('-v','--version', action='version', version='%(prog)s 1.0')
+
+	parser.add_argument('foo', nargs=1)
 	
 	results = parser.parse_args()
 	print( 'simple_value     =', results.simple_value )
@@ -74,6 +76,10 @@ if __name__ == "__main__":
 	print( 'boolean_switch   =', results.boolean_switch )
 	print( 'collection       =', results.collection )
 	print( 'const_collection =', results.const_collection )
+	print( 'foo              =', results.foo[0] )
+
+	var = "foo:" + results.foo[0] +":testing"
+	print( var )
 
 	main()
 
